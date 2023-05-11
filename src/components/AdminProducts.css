@@ -1,0 +1,48 @@
+.container_admin{
+
+    display: flex;
+    flex-direction: row;
+    margin:20px;
+    margin-left: 100px;
+    
+}
+
+.titleIngresar {
+    font-size: 30px;
+    margin: 30px;
+}
+.container_crearproducto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.button {
+    background-color: #ffffff;
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in;
+    margin: 10px;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container_admin {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .container_crearproducto {
+        margin-left: 10px;
+    }
+}

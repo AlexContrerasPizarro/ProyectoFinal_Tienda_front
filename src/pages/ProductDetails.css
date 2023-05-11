@@ -1,0 +1,128 @@
+.productDetail{
+
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.productInfo{
+    display: flex;
+    flex-direction: column;
+ 
+    margin:20px;
+  
+}
+
+.productInfo2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+
+.productPrice{
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    color: #000;
+
+}
+
+button {
+    background-color: #ffffff;
+    color: #000;
+    width: 150px;
+    border-color: grey;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in;
+  }
+
+  button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  @media only screen and (max-width: 768px) {
+    .productDetail {
+      flex-direction: column;
+      margin: 30px;
+    }
+    .productInfo {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .productInfo2 {
+      width: 100%;
+    }
+  }
+  
+  .productDetail {
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+  }
+  
+  .productInfo2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+  }
+
+  .productName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+  }
+  
+  .productDescp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+  }
+
+  .productPrice {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  button {
+    background-color: #ffffff;
+    color: #000;
+    width: 150px;
+    border-color: grey;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in;
+  }
+  
+  button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
