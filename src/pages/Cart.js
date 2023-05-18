@@ -10,17 +10,6 @@ const Cart = () => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
 
-  // REVISAR
-  // useEffect(() => {
-  //   if (cart.length === 0) {
-  //     setCart(JSON.parse(localStorage.getItem("cart")));
-  //   }
-  //   else if (localStorage.getItem("cart") === null) {
-  //     navigate('/emptycart');
-  //   }
-
-  // });
-
   const handleIncreaseQuantity = (id) => {
     let list = [];
     cart.forEach((item) => {
@@ -75,7 +64,11 @@ const Cart = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const id = user.id;
+    const id = user ? user.id : null;
+    if(!id){
+      window.alert("Debes logearte para finalizar la compra.");
+      return;
+    }
     console.log(id);
     cart.forEach((item) => {
       products.push(item.product.id);
@@ -100,6 +93,7 @@ const Cart = () => {
     localStorage.removeItem("cart");
     navigate("/thanks");
   }
+
 
   let total_price = 0;
   return (
@@ -126,8 +120,8 @@ const Cart = () => {
                 <td className=''>{item.quant}</td>
                 <td className=''>${price}</td>
                 <td><div>
-                  <i class="fas fa-plus" title='Agregar' onClick={() => { handleDecreaseQuantity(item.product.id) }}></i>
-                  <i class="fas fa-minus" title='Descontar' onClick={() => { handleIncreaseQuantity(item.product.id) }}></i>
+                  <i class="fas fa-plus" title='Agregar' onClick={() => { handleIncreaseQuantity(item.product.id) }}></i>
+                  <i class="fas fa-minus" title='Descontar' onClick={() => { handleDecreaseQuantity(item.product.id) }}></i>
                   <i class="fas fa-trash-alt ired" title='Eliminar' onClick={() => { handleRemove(item.product.id) }}></i>
                 </div></td>
               </tr>
