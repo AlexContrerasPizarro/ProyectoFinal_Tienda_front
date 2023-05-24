@@ -75,7 +75,7 @@ const Cart = () => {
       quantity.push(item.quant);
     });
     try {
-      const response = await axios.post(`http://localhost:5000/orders/create/${id}`,
+      const response = await axios.post(`https://proyectofinaltiendaback.up.railway.app/orders/create/${id}`,
         {
           id: id,
           products: products,

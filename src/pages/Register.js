@@ -23,7 +23,7 @@ const Register = () => {
     try {
       if(password === confirmPassword)
     {
-      const response = await axios.post("http://localhost:5000/user/register",
+      const response = await axios.post("https://proyectofinaltiendaback.up.railway.app/user/register",
       {
         username:username,
         name:name,

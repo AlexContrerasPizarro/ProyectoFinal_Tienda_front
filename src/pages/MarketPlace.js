@@ -10,7 +10,7 @@ const MarketPlace = () => {
 
   const getProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/products');
+      const response = await axios.get('https://proyectofinaltiendaback.up.railway.app/products');
       setProducts(response.data.data.products);
       setIsError(false);
     } catch (error) {

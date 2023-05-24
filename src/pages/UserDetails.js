@@ -25,7 +25,7 @@ const UserDetails = () => {
 
   const getUserDetails = async () => {
     try {
-      const src = `http://localhost:5000/user/${id}`;
+      const src = `https://proyectofinaltiendaback.up.railway.app/user/${id}`;
       const response = await axios.get(src);
       console.log(response.data.data.user);
       setName(response.data.data.user.name);
@@ -38,7 +38,7 @@ const UserDetails = () => {
 
   const getOrders = async () => {
     try {
-      const src = `http://localhost:5000/orders/user/${id}`;
+      const src = `https://proyectofinaltiendaback.up.railway.app/orders/user/${id}`;
       const response = await axios.get(src);
       console.log("Orders", response.data.data.orders);
       setOrders(response.data.data.orders);

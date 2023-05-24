@@ -14,7 +14,7 @@ const AdminProductActualizar = () => {
 
     const getProduct = async () => {
         try {
-            const src = `http://localhost:5000/products/${id}`;
+            const src = `https://proyectofinaltiendaback.up.railway.app/products/${id}`;
             const response = await axios.get(src);
             console.log(response.data.data.product);
             setProduct(response.data.data.product);
@@ -34,7 +34,7 @@ const AdminProductActualizar = () => {
 
     const updateStock = async (id) => {
         try {
-            const src = `http://localhost:5000/products/update/${id}`;
+            const src = `https://proyectofinaltiendaback.up.railway.app/products/update/${id}`;
             const response = await axios.post(src, {
                 addStock: stock - originalStock
             })
@@ -46,7 +46,7 @@ const AdminProductActualizar = () => {
 
     const updatePrice = async (id) => {
         try {
-            const src = `http://localhost:5000/products/update/price/${id}`;
+            const src = `https://proyectofinaltiendaback.up.railway.app/products/update/price/${id}`;
             const response = await axios.post(src, {
                 newprice: newPrice
             });

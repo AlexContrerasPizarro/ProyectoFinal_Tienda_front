@@ -16,7 +16,7 @@ const AdminProducts = () => {
 
   const getProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/products/");
+      const response = await axios.get("https://proyectofinaltiendaback.up.railway.app/products/");
       console.log(response.data.data.products);
       setProducts(response.data.data.products);
     } catch (error) {
@@ -26,7 +26,7 @@ const AdminProducts = () => {
 
   const createProduct = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/products/create",
+      const response = await axios.post("https://proyectofinaltiendaback.up.railway.app/products/create",
         {
           name: name,
           img: image,
@@ -48,7 +48,7 @@ const AdminProducts = () => {
 
   const removeProduct = async (id) => {
     try {
-      const src = `http://localhost:5000/products/delete/${id}`;
+      const src = `https://proyectofinaltiendaback.up.railway.app/products/delete/${id}`;
       const response = axios.delete(src);
       console.log(response);
     } catch (error) {
