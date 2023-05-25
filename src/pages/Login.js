@@ -28,8 +28,11 @@ const Login = () => {
         setUser(user);
         localStorage.setItem("user", JSON.stringify(user));
         navigate("/");
-      }
-    } catch (error) {
+      }else {
+        window.alert("Usuario o Contraseña Incorrecta.");  
+     }
+    }
+     catch (error) {
       console.log(error);
     }
   }
